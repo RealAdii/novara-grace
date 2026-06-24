@@ -5,8 +5,8 @@ export const CONTACT_INFO = {
   addressLine1: 'Valencia, Souterpet Main Road',
   addressLine2: 'Mangalore 575002, Karnataka',
   phone: '+91 88846 66601',
-  email: 'hello@novaragrace.in',
-  hours: 'Monday to Saturday',
+  email: 'thenovaragracefoundation@gmail.com',
+  hours: 'Monday to Friday',
   hoursDetail: '9:00 am to 6:00 pm',
   online: 'Available for families in Dubai, Singapore and abroad. Reach out to discuss.',
 }
