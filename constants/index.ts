@@ -4,7 +4,7 @@ export const CONTACT_INFO = {
   address: 'Valencia, Souterpet Main Road, Mangalore 575002, Karnataka',
   addressLine1: 'Valencia, Souterpet Main Road',
   addressLine2: 'Mangalore 575002, Karnataka',
-  phone: '+91 XXXXX XXXXX',
+  phone: '+91 88846 66601',
   email: 'hello@novaragrace.in',
   hours: 'Monday to Saturday',
   hoursDetail: '9:00 am to 6:00 pm',
