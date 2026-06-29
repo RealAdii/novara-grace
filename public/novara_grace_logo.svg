@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="800" height="300" viewBox="0 0 800 300" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Gradient for the icon -->
+    <linearGradient id="iconGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#4A9B8E;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#6BBF9F;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Icon: Abstract representation of family/growth - parent and child figures with a protective embrace -->
+  <g transform="translate(60, 80)">
+    <!-- Outer arc representing protection/care -->
+    <path d="M 70 70 Q 70 20, 35 20 Q 0 20, 0 70" 
+          fill="none" 
+          stroke="url(#iconGradient)" 
+          stroke-width="3" 
+          stroke-linecap="round"/>
+    
+    <!-- Parent figure (larger circle) -->
+    <circle cx="20" cy="55" r="8" fill="url(#iconGradient)"/>
+    
+    <!-- Child figure (smaller circle) -->
+    <circle cx="45" cy="60" r="6" fill="#4A9B8E"/>
+    
+    <!-- Growth element - leaf/sprout -->
+    <path d="M 35 35 Q 40 25, 45 35 Q 40 30, 35 35" 
+          fill="#6BBF9F" 
+          opacity="0.8"/>
+    
+    <!-- Connection/bond line -->
+    <path d="M 25 60 L 40 62" 
+          stroke="url(#iconGradient)" 
+          stroke-width="2" 
+          stroke-linecap="round"
+          opacity="0.6"/>
+  </g>
+  
+  <!-- Text: Brand Name -->
+  <g transform="translate(160, 80)">
+    <!-- Main brand name -->
+    <text x="0" y="40" 
+          font-family="'Montserrat', 'Helvetica Neue', sans-serif" 
+          font-size="42" 
+          font-weight="600" 
+          fill="#2C5F5D"
+          letter-spacing="-0.5">
+      NOVARA GRACE
+    </text>
+    
+    <!-- Subtitle line 1 -->
+    <text x="0" y="75" 
+          font-family="'Lato', 'Helvetica', sans-serif" 
+          font-size="16" 
+          font-weight="400" 
+          fill="#5A8885"
+          letter-spacing="1.5">
+      CENTRE FOR CHILD DEVELOPMENT
+    </text>
+    
+    <!-- Subtitle line 2 -->
+    <text x="0" y="100" 
+          font-family="'Lato', 'Helvetica', sans-serif" 
+          font-size="16" 
+          font-weight="400" 
+          fill="#5A8885"
+          letter-spacing="1.5">
+      AND FAMILY WELFARE
+    </text>
+  </g>
+  
+  <!-- Decorative element: subtle underline accent -->
+  <line x1="160" y1="195" x2="280" y2="195" 
+        stroke="#6BBF9F" 
+        stroke-width="2" 
+        stroke-linecap="round"
+        opacity="0.5"/>
+</svg>

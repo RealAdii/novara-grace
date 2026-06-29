@@ -3,7 +3,7 @@
 import { useState, useEffect } from 'react'
 import { Menu, X } from 'lucide-react'
 import { CALENDLY_URL } from '@/constants'
-import { NovaragraceLogo } from './NovaragraceLogo'
+import Image from 'next/image'
 
 const links = [
   { href: '#about', label: 'About' },
@@ -33,10 +33,18 @@ export function Nav() {
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
           scrolled ? 'bg-white/97 shadow-[0_1px_0_rgba(155,91,110,0.12)]' : 'bg-white/97 border-b border-[rgba(155,91,110,0.12)]'
         }`}
-        style={{ height: 72, display: 'flex', alignItems: 'center', padding: '0 4rem', justifyContent: 'space-between' }}
+        style={{ height: 140, display: 'flex', alignItems: 'center', padding: '0 4rem', justifyContent: 'space-between' }}
       >
-        <a href="#home" className="flex items-center gap-3.5 no-underline">
-          <NovaragraceLogo />
+        <a href="#home" className="flex items-center no-underline">
+          <Image
+            src="/logo.png"
+            alt="Novara Grace"
+            width={3634}
+            height={953}
+            priority
+            unoptimized
+            style={{ height: 116, width: 'auto' }}
+          />
         </a>
 
         <ul className="hidden md:flex gap-10 list-none m-0 p-0">
@@ -70,7 +78,7 @@ export function Nav() {
       </nav>
 
       {mobileOpen && (
-        <div className="fixed inset-0 z-40 bg-white pt-[72px] flex flex-col" onClick={() => setMobileOpen(false)}>
+        <div className="fixed inset-0 z-40 bg-white pt-[140px] flex flex-col" onClick={() => setMobileOpen(false)}>
           <div className="flex flex-col px-6 py-8 gap-6">
             {links.map((link) => (
               <a

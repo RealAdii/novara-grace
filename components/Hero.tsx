@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from 'react'
+import Image from 'next/image'
 import { CALENDLY_URL } from '@/constants'
 
 type Tab = 'story' | 'founder' | 'foundation'
@@ -20,7 +21,7 @@ export function Hero() {
       style={{
         minHeight: '100vh',
         background: '#faf8f5',
-        paddingTop: 72,
+        paddingTop: 140,
         display: 'grid',
         gridTemplateColumns: '1fr 1fr',
         position: 'relative',
@@ -30,11 +31,6 @@ export function Hero() {
       {/* Left column */}
       <div style={{ padding: '5rem 3rem 5rem 5rem', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}
         className="max-md:!p-12 max-md:!col-span-2">
-        <p className="text-[0.7rem] tracking-[0.2em] uppercase text-rose font-medium mb-6 flex items-center gap-2.5">
-          <span className="block w-7 h-px bg-rose-mid flex-shrink-0" />
-          Mangalore
-        </p>
-
         <h1 className="font-serif text-teal font-medium leading-[1.15] mb-4"
           style={{ fontSize: 'clamp(2.6rem, 3.5vw, 3.8rem)' }}>
           Where your child<br />
@@ -125,18 +121,23 @@ export function Hero() {
           <div
             style={{
               gridColumn: 1, gridRow: '1/3',
-              background: 'linear-gradient(135deg,#1E6B5B 0%,#144d41 100%)',
               position: 'relative',
-              display: 'flex', alignItems: 'center', justifyContent: 'center',
               overflow: 'hidden',
             }}
           >
-            <PhotoPlaceholder />
+            <Image
+              src="/images/hero-main.jpg"
+              alt="Child development at Novara Grace"
+              fill
+              style={{ objectFit: 'cover', objectPosition: 'center' }}
+              sizes="33vw"
+              priority
+            />
             {/* Stat card */}
             <div
               style={{
                 position: 'absolute', bottom: '2rem', left: '2rem',
-                background: 'rgba(255,255,255,0.12)',
+                background: 'rgba(0,0,0,0.35)',
                 border: '1px solid rgba(255,255,255,0.2)',
                 padding: '1.25rem 1.5rem',
                 backdropFilter: 'blur(8px)',
@@ -148,45 +149,28 @@ export function Hero() {
           </div>
 
           {/* Top right */}
-          <div
-            style={{
-              gridColumn: 2, gridRow: 1,
-              background: 'linear-gradient(135deg,#9B5B6E 0%,#7a4558 100%)',
-              display: 'flex', alignItems: 'center', justifyContent: 'center',
-            }}
-          >
-            <PhotoPlaceholder small />
+          <div style={{ gridColumn: 2, gridRow: 1, position: 'relative', overflow: 'hidden' }}>
+            <Image
+              src="/images/hero-top.jpg"
+              alt="Family support at Novara Grace"
+              fill
+              style={{ objectFit: 'cover', objectPosition: 'center' }}
+              sizes="17vw"
+            />
           </div>
 
           {/* Bottom right */}
-          <div
-            style={{
-              gridColumn: 2, gridRow: 2,
-              background: '#e8f4f1',
-              display: 'flex', alignItems: 'center', justifyContent: 'center',
-            }}
-          >
-            <PhotoPlaceholder small teal />
+          <div style={{ gridColumn: 2, gridRow: 2, position: 'relative', overflow: 'hidden' }}>
+            <Image
+              src="/images/hero-bottom.jpg"
+              alt="Child activity at Novara Grace"
+              fill
+              style={{ objectFit: 'cover', objectPosition: 'center' }}
+              sizes="17vw"
+            />
           </div>
         </div>
       </div>
     </section>
-  )
-}
-
-function PhotoPlaceholder({ small = false, teal = false }: { small?: boolean; teal?: boolean }) {
-  const size = small ? 32 : 48
-  const color = teal ? 'rgba(30,107,91,0.2)' : 'rgba(255,255,255,0.2)'
-  const stroke = teal ? 'rgba(30,107,91,0.2)' : 'rgba(255,255,255,0.2)'
-  return (
-    <div className="flex items-center justify-center flex-col gap-2 w-full h-full">
-      <svg width={size} height={size} viewBox="0 0 48 48" fill="none">
-        <circle cx="24" cy="18" r="8" fill={color} />
-        <path d="M8 42c0-8.837 7.163-16 16-16s16 7.163 16 16" stroke={stroke} strokeWidth="2" fill="none" />
-      </svg>
-      {!small && (
-        <span className="text-[0.6rem] tracking-[0.1em] uppercase text-white/25">Add your photo</span>
-      )}
-    </div>
   )
 }

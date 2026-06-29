@@ -1,9 +1,9 @@
 export const CALENDLY_URL = 'https://calendly.com/novaragrace' // swap in real link
 
 export const CONTACT_INFO = {
-  address: 'Valencia, Souterpet Main Road, Mangalore 575002, Karnataka',
-  addressLine1: 'Valencia, Souterpet Main Road',
-  addressLine2: 'Mangalore 575002, Karnataka',
+  address: 'Palms Springs, Ferrer Colony, 2nd Cross, Souterpet Main Road, Valencia, Mangalore 575002',
+  addressLine1: 'Palms Springs, Ferrer Colony, 2nd Cross, Souterpet Main Road',
+  addressLine2: 'Valencia, Mangalore 575002',
   phone: '+91 88846 66601',
   email: 'thenovaragracefoundation@gmail.com',
   hours: 'Monday to Friday',
